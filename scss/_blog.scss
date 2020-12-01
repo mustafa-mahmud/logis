@@ -1,0 +1,84 @@
+.blog {
+	padding: 2rem 10rem;
+	text-align: center;
+
+	.title-box {
+		position: relative;
+		margin-bottom: 7rem;
+		display: inline-block;
+
+		h1 {
+			font-size: 5rem;
+			color: $default-color;
+			font-weight: normal;
+			text-transform: capitalize;
+		}
+
+		p {
+			font-size: $default-font-size;
+			font-weight: bold;
+		}
+
+		&::before {
+			content: '';
+			width: 50%;
+			height: 3px;
+			background-color: $default-color;
+			position: absolute;
+			display: block;
+			left: 25%;
+			bottom: -10px;
+		}
+	}
+
+	&__info {
+		display: flex;
+	}
+
+	&__details {
+		margin-right: 5rem;
+
+		img {
+			width: 35rem;
+		}
+
+		h2 {
+			font-size: 2rem;
+			font-weight: normal;
+			color: $default-color;
+			text-align: left;
+		}
+
+		ul {
+			display: flex;
+			justify-content: space-between;
+
+			li {
+				a {
+					color: #666666;
+					font-size: 1.5rem;
+				}
+			}
+		}
+
+		p {
+			text-align: left;
+			margin-top: 1.5rem;
+		}
+	}
+
+	&__btn {
+		background-color: $default-color;
+		width: 30vw;
+		padding: 10px 0;
+		display: inline-block;
+		text-transform: uppercase;
+		margin-top: 5rem;
+		color: #ffffff;
+		cursor: pointer;
+
+		&:hover {
+			background-color: darken($color: $default-color, $amount: 15%);
+		}
+	}
+}

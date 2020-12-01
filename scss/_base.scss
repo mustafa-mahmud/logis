@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%; //10/16=0.625
+}
+
+body {
+	box-sizing: border-box;
+	font-family: 'Poppins',
+		sans-serif;
+	font-size: 2rem;
+	background-color: #FFFFFF;
+}
+
+::selection {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+p {
+	font-family: $default-font-family;
+	font-size: $default-font-size;
+	color: $p-color;
+}
+
+.title-box {}
+
+.title {
+	display: inline-block;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: $default-color;
+	margin-top: $space-2;
+	margin-bottom: $space-2;
+	z-index: 1;
+
+	&--left {
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -0px;
+			width: 70%;
+			height: 3px;
+			background-color: $default-color;
+		}
+	}
+
+	&--center {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 50%;
+			height: 3px;
+			left: 50%;
+			bottom: 0;
+			transform: translateX(-50%);
+			background-color: $default-color;
+		}
+	}
+
+	&--2 {
+		color: $default-color2;
+		font-size: 4rem;
+		margin-bottom: 5rem;
+
+		&::before {
+			background-color: $default-color2;
+		}
+	}
+}
+
+ul.our-right {
+	margin-top: $space-3;
+	color: $default-color;
+
+	&--2 {
+		color: $default-color2 !important;
+	}
+
+	li {
+		font-size: $default-font-size;
+		margin-bottom: $space-1;
+		color: inherit;
+
+		&::before {
+			content: '\f00c';
+			font-family: FontAwesome;
+			font-size: 2rem;
+			color: $default-color;
+		}
+	}
+}
